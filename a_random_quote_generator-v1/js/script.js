@@ -40,7 +40,7 @@ const quoteArray =  [
     that comes inevitably to those who are ready and prepared to receive it.`,
     from: 'Satyam Shivam Sundaram: Truth Godliness Beauty',
     guru: 'Osho',
-    when: '00'
+    when: ''
   },
   { 
     quote: `A man of meditation comes to a point where there is no temptation left. Try to understand it. Temptation never comes from without: it is the repressed desire, repressed energy, repressed sex, repressed greed that creates temptation. 
@@ -92,22 +92,36 @@ function getRandomQuote(arr){
   let random = Math.floor(Math.random() * arr.length);
   return random;
 }
+/***
+ * `printQuote` function
+***/
+
+
 function printQuote(){
     let num = getRandomQuote(quoteArray)
     console.log(quoteArray[num]);
     document.querySelector('.quote').innerText = quoteArray[num].quote;
     document.querySelector('.citation').innerText = quoteArray[num].from;
-    document.querySelector('.name').innerText = quoteArray[num].guru;
+    document.querySelector('.source').innerText = quoteArray[num].guru;
     document.querySelector('.year').innerText = quoteArray[num].when;
 }
 
 
+// function printQuote(){
+//   let num = getRandomQuote(quoteArray)
+//   document.querySelector('.quote-box').innerHTML = `"<p class="quote">${quoteArray[num].quote}</p>" 
+//   <p class="source">${quoteArray[num].guru}<span class="citation">${quoteArray[num].from}</span><span class="year">${quoteArray[num].when}</span></p>`;
+// }
+
+// /***
+//  * `quoteInterval` function
+// ***/
+
+// setInterval(printQuote())
 
 
 
-/***
- * `printQuote` function
-***/
+
 
 
 /***
