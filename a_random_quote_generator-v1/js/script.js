@@ -11,7 +11,7 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 
-const quoteArray =  [
+const quotes =  [
 
   { 
     quote: `In the midst of the common, the worldly, the mundane,
@@ -98,12 +98,12 @@ function getRandomQuote(arr){
 ***/
 
 function printQuote(){
-  let num = getRandomQuote(quoteArray)
-  document.querySelector('.quote-box').innerHTML = `"<p class="quote">${quoteArray[num].quote}</p>" 
-  <p class="source">${quoteArray[num].guru}<span class="citation">${quoteArray[num].from}</span><span class="year">${quoteArray[num].when}</span></p>`;
+  let num = getRandomQuote(quotes)
+  document.querySelector('.quote-box').innerHTML = `"<p class="quote">${quotes[num].quote}</p>" 
+  <p class="source">${quotes[num].guru}<span class="citation">${quotes[num].from}</span><span class="year">${quotes[num].when}</span></p>`;
 
-  if (quoteArray[num].tags){
-    document.querySelector('.year').innerText += `${quoteArray[num].tags}`;
+  if (quotes[num].tags){
+    document.querySelector('.year').innerText += `${quotes[num].tags}`;
     }
 }
 
