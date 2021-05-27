@@ -54,7 +54,7 @@ const quotes =  [
       Why come down from what you are capable of.`,
     from: 'Sadhguru.org',
     guru: 'Sadhguru Jaggi Vasudev',
-    when: '2020 ',
+    when: '2020',
     tags: 'Isha Foundation'
   },
   { 
@@ -62,7 +62,7 @@ const quotes =  [
       One shining example is Mahatma Gandhi, whose commitment moved millions of people across the world`,
     from: 'Sadhguru.org',
     guru: 'Sadhguru Jaggi Vasudev',
-    when: '2020 '
+    when: '2020'
   },
   { 
     quote: `It takes a long time-many incarnations of right action, good company, help of the guru, self-awakening, wisdom, and meditation-for man to regain his soul consciousness of immortality. To reach this state of Self-realization, 
@@ -99,7 +99,7 @@ function getRandomQuote(arr){
 
 function printQuote(){
   let num = getRandomQuote(quotes)
-  document.querySelector('.quote-box').innerHTML = `"<p class="quote">${quotes[num].quote}</p>" 
+  document.querySelector('.quote-box').innerHTML = `<p class="quote">${quotes[num].quote}</p> 
   <p class="source">${quotes[num].guru}<span class="citation">${quotes[num].from}</span><span class="year">${quotes[num].when}</span></p>`;
 
   if (quotes[num].tags){
@@ -115,8 +115,8 @@ function makeColor() {
   return document.querySelector('.container').style.backgroundColor = rgbGo;
 }
 
-setInterval(printQuote, 2000);
-setInterval(makeColor, 2000);
+// setInterval(printQuote, 2000);
+// setInterval(makeColor, 2000);
 // setInterval(extraProp, 2000);
 
 /* /* /* /***
